@@ -1,0 +1,22 @@
+<body>
+  <div id="bud">
+    <h1><i class="fas fa-tasks"></i>My tasks</h1>
+    <% @tasks.each do |task| %>
+      <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">
+      <%= link_to task.title, task_path(task) %>
+      </label>
+      </div>
+
+  <% end %>
+
+  <div id="add">
+    <%= link_to 'Add', new_task_path %>
+  </div>
+
+  </div>
+
+</body>
+
+
